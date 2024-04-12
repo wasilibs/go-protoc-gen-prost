@@ -1,0 +1,17 @@
+version: v1
+plugins:
+- plugin: prost
+  out: ../build/buf/rust
+  path: ["go", "run", "../cmd/protoc-gen-prost"]
+- plugin: prost-crate
+  strategy: all
+  opt:
+  - no_features
+  out: ../build/buf/rust
+  path: ["go", "run", "../cmd/protoc-gen-prost-crate"]
+- plugin: prost-serde
+  out: ../build/buf/rust
+  path: ["go", "run", "../cmd/protoc-gen-prost-serde"]
+- plugin: tonic
+  out: ../build/buf/rust
+  path: ["go", "run", "../cmd/protoc-gen-tonic"]

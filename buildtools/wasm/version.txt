@@ -1,0 +1,1 @@
+protoc-gen-prost-v0.3.1

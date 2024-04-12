@@ -1,0 +1,61 @@
+builds:
+- main: ./cmd/protoc-gen-prost
+  id: es
+  binary: protoc-gen-prost
+  env:
+  - CGO_ENABLED=0
+  targets:
+  - linux_amd64
+  - linux_arm64
+  - darwin_amd64
+  - darwin_arm64
+  - windows_amd64
+  - windows_arm64
+- main: ./cmd/protoc-gen-prost-crate
+  id: es
+  binary: protoc-gen-prost-crate
+  env:
+  - CGO_ENABLED=0
+  targets:
+  - linux_amd64
+  - linux_arm64
+  - darwin_amd64
+  - darwin_arm64
+  - windows_amd64
+  - windows_arm64
+- main: ./cmd/protoc-gen-prost-serde
+  id: es
+  binary: protoc-gen-prost-serde
+  env:
+  - CGO_ENABLED=0
+  targets:
+  - linux_amd64
+  - linux_arm64
+  - darwin_amd64
+  - darwin_arm64
+  - windows_amd64
+  - windows_arm64
+- main: ./cmd/protoc-gen-tonic
+  id: es
+  binary: protoc-gen-tonic
+  env:
+  - CGO_ENABLED=0
+  targets:
+  - linux_amd64
+  - linux_arm64
+  - darwin_amd64
+  - darwin_arm64
+  - windows_amd64
+  - windows_arm64
+archives:
+- format_overrides:
+  - goos: windows
+    format: zip
+release:
+  mode: append
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+changelog:
+  skip: true
