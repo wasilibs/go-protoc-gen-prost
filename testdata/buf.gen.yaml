@@ -12,6 +12,3 @@ plugins:
 - plugin: prost-serde
   out: ../build/buf/rust
   path: ["go", "run", "../cmd/protoc-gen-prost-serde"]
-- plugin: tonic
-  out: ../build/buf/rust
-  path: ["go", "run", "../cmd/protoc-gen-tonic"]

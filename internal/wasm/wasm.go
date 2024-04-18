@@ -10,6 +10,3 @@ var ProtocGenProstCrate []byte
 
 //go:embed protoc-gen-prost-serde.wasm
 var ProtocGenProstSerde []byte
-
-//go:embed protoc-gen-tonic.wasm
-var ProtocGenTonic []byte

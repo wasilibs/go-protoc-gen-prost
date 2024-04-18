@@ -1,6 +1,6 @@
 # go-protoc-gen-prost
 
-go-protoc-gen-prost is a distribution of [protoc-gen-prost][1]. 
+go-protoc-gen-prost is a distribution of the code generator of [prost][1]. 
 It does not actually reimplement any functionality of prost in Go, instead compiling it
 to WebAssembly, and executing with the pure Go Wasm runtime [wazero][2].
 This means that `go install` or `go run` can be used to execute it, with no need to rely on external
@@ -41,7 +41,7 @@ See a full [example][5] in `go-protoc-gen-builtins`. To generate protos, enter t
 you will be able to generate protos. The first time using `go run` for a command, Go automatically builds
 it making it slower, but subsequent invocations should be quite fast.
 
-[1]: https://github.com/neoeinstein/protoc-gen-prost
+[1]: https://github.com/tokio-rs/prost
 [2]: https://wazero.io/
 [3]: https://buf.build/
 [4]: https://github.com/wasilibs/go-protoc-gen-builtins
