@@ -10,7 +10,7 @@ import (
 
 func init() {
 	magefiles.SetLibraryName("protoc-gen-prost")
-	magefiles.SetLibraryRepo("neoeinstein/protoc-gen-prost")
+	magefiles.SetLibraryRepo("tokio-rs/prost")
 }
 
 func Snapshot() error {
