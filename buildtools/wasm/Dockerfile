@@ -7,7 +7,7 @@ RUN mkdir -p /workspace && curl -L https://github.com/neoeinstein/protoc-gen-pro
 WORKDIR /workspace
 
 ADD buildtools/wasm/version.txt version.txt
-RUN cargo update && cargo update prost-build --precise $(cat version.txt) && cargo update prost-types --precise $(cat version.txt) && cargo update prost --precise $(cat version.txt)
+RUN cargo update && cargo update prost-build --precise $(sed 's/v//' version.txt) && cargo update prost-types --precise $(sed 's/v//' version.txt) && cargo update prost --precise $(sed 's/v//' version.txt)
 RUN cargo build --release --target wasm32-wasi -p protoc-gen-prost && cargo build --release --target wasm32-wasi -p protoc-gen-prost-crate && cargo build --release --target wasm32-wasi -p protoc-gen-prost-serde
 
 SHELL ["/bin/bash", "-c"]
