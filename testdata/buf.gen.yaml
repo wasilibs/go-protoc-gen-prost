@@ -1,14 +1,14 @@
 version: v1
 plugins:
-- plugin: prost
-  out: ../out/buf/rust
-  path: ["go", "run", "../cmd/protoc-gen-prost"]
-- plugin: prost-crate
-  strategy: all
-  opt:
-  - no_features
-  out: ../out/buf/rust
-  path: ["go", "run", "../cmd/protoc-gen-prost-crate"]
-- plugin: prost-serde
-  out: ../out/buf/rust
-  path: ["go", "run", "../cmd/protoc-gen-prost-serde"]
+  - plugin: prost
+    out: ../out/buf/rust
+    path: ["go", "run", "../cmd/protoc-gen-prost"]
+  - plugin: prost-crate
+    strategy: all
+    opt:
+      - no_features
+    out: ../out/buf/rust
+    path: ["go", "run", "../cmd/protoc-gen-prost-crate"]
+  - plugin: prost-serde
+    out: ../out/buf/rust
+    path: ["go", "run", "../cmd/protoc-gen-prost-serde"]

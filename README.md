@@ -1,6 +1,6 @@
 # go-protoc-gen-prost
 
-go-protoc-gen-prost is a distribution of the code generator of [prost][1]. 
+go-protoc-gen-prost is a distribution of the code generator of [prost][1].
 It does not actually reimplement any functionality of prost in Go, instead compiling it
 to WebAssembly, and executing with the pure Go Wasm runtime [wazero][2].
 This means that `go install` or `go run` can be used to execute it, with no need to rely on external
@@ -28,7 +28,10 @@ version: v1
 plugins:
   - plugin: prost
     out: out/rust
-    path: ["go", "run", "github.com/wasilibs/go-protoc-gen-prost/cmd/protoc-gen-prost@latest"]
+    path:
+      - "go"
+      - "run"
+      - "github.com/wasilibs/go-protoc-gen-prost/cmd/protoc-gen-prost@latest"
 ```
 
 This makes it possible to have full protobuf/gRPC generation with no installation of tools,
