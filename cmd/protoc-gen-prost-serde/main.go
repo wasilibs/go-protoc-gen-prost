@@ -8,5 +8,5 @@ import (
 )
 
 func main() {
-	os.Exit(runner.Run("protoc-gen-prost-serde", os.Args[1:], wasm.ProtocGenProstSerde, os.Stdin, os.Stdout, os.Stderr, "."))
+	os.Exit(runner.Run("protoc-gen-prost-serde", os.Args[1:], wasm.ProtocGenProstSerde, os.Stdin, os.Stdout, os.Stderr))
 }
