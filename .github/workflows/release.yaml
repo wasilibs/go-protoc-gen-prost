@@ -12,5 +12,5 @@ permissions:
 
 jobs:
   release:
-    uses: wasilibs/actions/.github/workflows/release.yaml@09063a6e2f4da10fd51a2af75c6469c17c35a160
+    uses: wasilibs/actions/.github/workflows/release.yaml@5bf268fde802fe591d6148e69a7ddb046384d657
     secrets: inherit
