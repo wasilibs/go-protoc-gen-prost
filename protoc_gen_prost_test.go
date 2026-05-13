@@ -23,8 +23,8 @@ func TestBuf(t *testing.T) {
 	}
 
 	for _, path := range []string{
-		filepath.Join("out", "buf", "rust", "helloworld.rs"),
-		filepath.Join("out", "buf", "rust", "helloworld.serde.rs"),
+		filepath.Join("out", "buf", "rust", "helloworld", "helloworld.rs"),
+		filepath.Join("out", "buf", "rust", "helloworld", "helloworld.serde.rs"),
 		filepath.Join("out", "buf", "rust", "mod.rs"),
 	} {
 		if _, err := os.Stat(path); err != nil {
